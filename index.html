@@ -7,7 +7,202 @@
     <title>Title</title>
 </head>
 <body>
-<p>Dilara Bakay</p>
+<body>
+<header class="nav">
+    <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Ga naar boven">
+            <span class="logo" aria-hidden="true"></span>
+            <span>Jouw Naam</span>
+        </a>
+        <nav class="nav-links" aria-label="Hoofdmenu">
+            <a href="#about">Over mij</a>
+            <a href="#projects">Projecten</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a class="btn" href="#" id="downloadCv">Download CV</a>
+        </nav>
+    </div>
+</header>
+
+<main id="top" class="wrap">
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="card hero-main">
+                <div class="tag"><span class="dot"></span> Student Digitale Vormgeving — 1e jaar</div>
+                <h1>Hey, ik ben <span style="background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent;">Dilara Bakay</span>.
+                    Ik ontwerp heldere, frisse digitale ervaringen.</h1>
+                <p class="lead">
+                    Ik focus op UI/UX, branding en motion basics. Hier vind je een selectie van mijn schoolprojecten en experimenten.
+                    Kijk gerust rond. Veel plezier!
+                </p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="#projects">Bekijk projecten</a>
+                    <a class="btn" href="#contact">Contacteer me</a>
+                </div>
+            </div>
+
+            <aside class="card hero-side">
+                <div class="avatar" aria-label="Profielfoto placeholder">
+                    <img src="" alt="Jouw Naam" />
+                    <span>Profielfoto</span>
+                </div>
+                <div class="mini">
+                    <h3>Tools</h3>
+                    <p>Figma • Photoshop • Illustrator • After Effects</p>
+                </div>
+                <div class="mini">
+                    <h3>Locatie</h3>
+                    <p>Hasselt (PXL) • Beschikbaar voor stage/side projects</p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-title">
+            <h2>Over mij</h2>
+            <p>Kort, maar met personality ✨</p>
+        </div>
+        <div class="grid-2">
+            <div class="card" style="padding:16px">
+                <p class="muted" style="margin:0; line-height:1.75">
+                    Ik ben een eerstejaars student Digitale Vormgeving met een grote liefde voor typografie, layouts en het “klopt-gevoel” in interface design.
+                    Ik leer graag door te maken: wireframes → prototypes → testen → verbeteren.
+                </p>
+            </div>
+            <div class="card" style="padding:16px">
+                <p class="muted" style="margin:0; line-height:1.75">
+                    Op dit moment ben ik vooral bezig met: design systems, component thinking, animatie basics en het bouwen van simpele websites.
+                    Mijn doel: later locatie-onafhankelijk kunnen werken.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-title">
+            <h2>Projecten</h2>
+            <p>Vervang de placeholders door je echte werk</p>
+        </div>
+
+        <div class="grid-3">
+            <article class="card project">
+                <div class="thumb"><b>Project 01</b></div>
+                <h3>Branding mini-case</h3>
+                <p>Logo, kleurenpalet en social templates voor een fictief merk. Focus: consistentie en typografie.</p>
+                <div class="chips">
+                    <span class="chip">Branding</span>
+                    <span class="chip">Illustrator</span>
+                    <span class="chip">Typografie</span>
+                </div>
+            </article>
+
+            <article class="card project">
+                <div class="thumb"><b>Project 02</b></div>
+                <h3>UI prototype in Figma</h3>
+                <p>App flow met wireframes en high-fidelity screens. Micro-interactions als bonus.</p>
+                <div class="chips">
+                    <span class="chip">UI/UX</span>
+                    <span class="chip">Figma</span>
+                    <span class="chip">Prototype</span>
+                </div>
+            </article>
+
+            <article class="card project">
+                <div class="thumb"><b>Project 03</b></div>
+                <h3>Motion poster</h3>
+                <p>Korte animatie (8–12s) met tekst, tempo en ritme. Focus: easing en timing.</p>
+                <div class="chips">
+                    <span class="chip">Motion</span>
+                    <span class="chip">After Effects</span>
+                    <span class="chip">Easing</span>
+                </div>
+            </article>
+        </div>
+
+        <div style="margin-top:14px" class="card" aria-label="Projecten tip">
+            <div style="padding:16px; display:flex; gap:12px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap">
+                <div style="max-width:70ch">
+                    <b>Tip om snel te upgraden:</b>
+                    <div class="muted" style="margin-top:6px; line-height:1.6">
+                        Voeg per project 3–5 beelden toe (proces + eindresultaat) en schrijf 2 zinnen over je rol en wat je geleerd hebt.
+                    </div>
+                </div>
+                <a class="btn" href="#contact">Vraag feedback</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-title">
+            <h2>Skills</h2>
+            <p>Pas de percentages aan zoals jij het voelt</p>
+        </div>
+        <div class="grid-3">
+            <div class="card skill">
+                <div class="row"><b>Figma (UI)</b><span class="muted">70%</span></div>
+                <div class="bar"><div style="width:70%"></div></div>
+            </div>
+            <div class="card skill">
+                <div class="row"><b>Branding</b><span class="muted">60%</span></div>
+                <div class="bar"><div style="width:60%"></div></div>
+            </div>
+            <div class="card skill">
+                <div class="row"><b>HTML/CSS</b><span class="muted">55%</span></div>
+                <div class="bar"><div style="width:55%"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-title">
+            <h2>Contact</h2>
+            <p>Dit formulier opent je mail-app (geen server nodig)</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="card" style="padding:16px">
+                <b>Stuur me een bericht</b>
+                <p class="muted" style="margin-top:8px; line-height:1.6">
+                    Zet hier je e-mail en socials. Als ge wilt, kan ik ook een versie maken met echte form submit (Netlify Forms).
+                </p>
+                <div class="chips" style="margin-top:10px">
+                    <a class="chip" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a class="chip" href="https://www.behance.net" target="_blank" rel="noreferrer">Behance</a>
+                    <a class="chip" href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+                </div>
+            </div>
+
+            <div class="card" style="padding:16px">
+                <form id="contactForm">
+                    <label>
+                        <span class="muted">Naam</span>
+                        <input name="name" placeholder="Jouw naam" required />
+                    </label>
+                    <label>
+                        <span class="muted">E-mail</span>
+                        <input name="email" type="email" placeholder="jij@example.com" required />
+                    </label>
+                    <label>
+                        <span class="muted">Bericht</span>
+                        <textarea name="message" placeholder="Hey! Ik zag je portfolio en..." required></textarea>
+                    </label>
+                    <button class="btn primary" type="submit">Verstuur</button>
+                    <div class="muted" style="font-size:12px">*Opent je standaard mail-app met ingevulde tekst.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <span>© <span id="year"></span> Jouw Naam — Digitale Vormgeving</span>
+            <a class="muted" href="#top">Terug naar boven ↑</a>
+        </div>
+    </footer>
+</main>
+
+</body>
 
 </body>
 </html>
