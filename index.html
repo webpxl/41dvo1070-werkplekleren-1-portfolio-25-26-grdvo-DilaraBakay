@@ -1,198 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <!-- Bootstrap CSS (CDN) -->
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="script.js" defer></script>
-    <title>Title</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dilara Bakay – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+
 </head>
 <body>
-<body>
-<header class="nav">
+  <nav>
     <div class="nav-inner">
-        <a class="brand" href="#top" aria-label="Ga naar boven">
-            <span class="logo" aria-hidden="true"></span>
-            <span>Dilara Bakay</span>
-        </a>
-        <nav class="nav-links" aria-label="Hoofdmenu">
-            <a href="#about">Over mij</a>
-            <a href="#projects">Projecten</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-            <a class="btn" href="#" id="downloadCv">Download CV</a>
-        </nav>
+      <div class="nav-logo">
+        <span class="dot">D.</span> <span class="name">Bakay</span>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <button onclick="goTo('home')"      data-nav="home"      class="active">Home</button>
+        <button onclick="goTo('over-mij')"  data-nav="over-mij">Over Mij</button>
+        <button onclick="goTo('projecten')" data-nav="projecten">Projecten</button>
+        <button onclick="goTo('skills')"    data-nav="skills">Skills</button>
+        <button onclick="goTo('contact')"   data-nav="contact">Contact</button>
+      </div>
+
+      <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <i data-lucide="menu" id="menuIcon"></i>
+      </button>
     </div>
-</header>
 
-<main id="top" class="wrap">
-    <section class="hero">
-        <div class="hero-grid">
-            <div class="card hero-main">
-                <div class="tag"><span class="dot"></span> Student Digitale Vormgeving — 1e jaar</div>
-                <h1>Hey, ik ben <span style="background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip:text; background-clip:text;">Dilara Bakay</span>.
-                    Ik ontwerp heldere, frisse digitale ervaringen.</h1>
-                <p class="lead">
-                    Ik focus op UI/UX, branding en motion basics. Hier vind je een selectie van mijn schoolprojecten en experimenten.
-                    Kijk gerust rond. Veel plezier!
-                </p>
-                <div class="hero-actions">
-                    <a class="btn primary" href="#projects">Bekijk projecten</a>
-                    <a class="btn" href="#contact">Contacteer me</a>
-                </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <button onclick="goTo('home')"      data-nav-m="home">Home</button>
+      <button onclick="goTo('over-mij')"  data-nav-m="over-mij">Over Mij</button>
+      <button onclick="goTo('projecten')" data-nav-m="projecten">Projecten</button>
+      <button onclick="goTo('skills')"    data-nav-m="skills">Skills</button>
+      <button onclick="goTo('contact')"   data-nav-m="contact">Contact</button>
+    </div>
+  </nav>
+  <section id="home">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+
+    <div class="hero-grid">
+
+      <!-- Tekst -->
+      <div class="hero-text" id="heroText">
+        <div class="hero-tag">Digital Design Student</div>
+
+        <h1 class="hero-heading">
+          Hi, ik ben <br>
+          <span class="accent">Dilara Bakay</span>
+        </h1>
+
+        <p class="hero-desc-lg">
+          UI/UX-student met een passie voor gebruiksvriendelijke interfaces, branding en digitale vormgeving.
+        </p>
+        <p class="hero-desc-sm">
+          Ik focus op UI/UX, branding en motion basics. Hier vind je een selectie van mijn schoolprojecten en experimenten.
+        </p>
+        <p class="hero-desc-sm">
+          Bekijk mijn recente schoolprojecten en ontdek hoe ik designproblemen aanpak.
+        </p>
+
+        <div class="hero-badges">
+          <div class="hero-badge">
+            <i data-lucide="map-pin"></i>
+            <span>Hasselt, België</span>
+          </div>
+          <div class="hero-badge">
+            <i data-lucide="graduation-cap"></i>
+            <span>PXL University</span>
+          </div>
+        </div>
+
+        <div class="hero-available">
+          <span>🟢</span>
+          <span>Beschikbaar voor stage vanaf februari 2027</span>
+        </div>
+
+        <div class="hero-buttons">
+          <button class="btn-primary"    onclick="goTo('projecten')">Bekijk Projecten</button>
+          <button class="btn-secondary"  onclick="goTo('contact')">Contact</button>
+        </div>
+      </div>
+
+      <div class="hero-photo-col" id="heroPhoto">
+        <div class="hero-photo-wrap">
+          <div class="hero-glow-bg"></div>
+
+          <div class="marquee-top">
+            <div class="marquee-track go-left">
+              <span class="marquee-item">Figma</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">Photoshop</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">Illustrator</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">After Effects</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">InDesign</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">Premiere Pro</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">Figma</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">Photoshop</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">Illustrator</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">After Effects</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">InDesign</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">Premiere Pro</span><span class="marquee-dot">•</span>
+            </div>
+          </div>
+
+          <div class="hero-photo-frame">
+            <img src="DIDI.PNG" alt="Dilara Bakay" />
+            <div class="hero-photo-overlay"></div>
+          </div>
+
+          <div class="marquee-bottom">
+            <div class="marquee-track go-right">
+              <span class="marquee-item">JavaScript</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">HTML</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">CSS</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">React</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">Tailwind</span><span class="marquee-dot">•</span>
+
+              <span class="marquee-item">JavaScript</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">HTML</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">CSS</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">React</span><span class="marquee-dot">•</span>
+              <span class="marquee-item">Tailwind</span><span class="marquee-dot">•</span>
+            </div>
+          </div>
+
+          <div class="hero-float"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="over-mij">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Over Mij</h2>
+        <p>Leer meer over mijn achtergrond, interesses en contactgegevens.</p>
+      </div>
+
+      <div class="over-mij-card">
+        <div class="over-mij-grid">
+
+          <div class="avatar-col">
+            <div class="avatar-wrap">
+              <div class="avatar-circle">
+                <img src="optie1-1.PNG" alt="Dilara Bakay" />
+              </div>
+              <div class="speech-bubble">
+                <p>Wat wil je weten? →</p>
+              </div>
             </div>
 
-            <aside class="card hero-side">
-                <div class="avatar" aria-label="Profielfoto placeholder">
-                    <img src="./css/assets/foto-portfolio.jpeg" alt="Jouw Naam" />
-                    <span>Profielfoto</span>
-                </div>
-                <div class="mini">
-                    <h3>Tools</h3>
-                    <p>Figma • Photoshop • Illustrator • After Effects</p>
-                </div>
-                <div class="mini">
-                    <h3>Locatie</h3>
-                    <p>Hasselt (PXL) • Beschikbaar voor stage/side projects</p>
-                </div>
-            </aside>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="section-title">
-            <h2>Over mij</h2>
-
-        </div>
-        <div class="grid-2">
-            <div class="card" style="padding:16px">
-                <p class="muted" style="margin:0; line-height:1.75">
-                    Ik ben een eerstejaars student Digitale Vormgeving met een grote liefde voor typografie, layouts en het “klopt-gevoel” in interface design.
-                    Ik leer graag door te maken: wireframes → prototypes → testen → verbeteren.
-                </p>
+            <div class="category-buttons">
+              <button class="cat-btn" onclick="showInfo('contact')" id="btn-contact">
+                <i data-lucide="mail"></i>
+                <span>Contactgegevens</span>
+              </button>
+              <button class="cat-btn" onclick="showInfo('hobbies')" id="btn-hobbies">
+                <i data-lucide="sparkles"></i>
+                <span>Hobbies &amp; Interesses</span>
+              </button>
+              <button class="cat-btn" onclick="showInfo('about')" id="btn-about">
+                <i data-lucide="user"></i>
+                <span>Over Mij</span>
+              </button>
             </div>
-            <div class="card" style="padding:16px">
-                <p class="muted" style="margin:0; line-height:1.75">
-                    Op dit moment ben ik vooral bezig met: design systems, component thinking, animatie basics en het bouwen van simpele websites.
-                    Mijn doel: later locatie-onafhankelijk kunnen werken.
-                </p>
+          </div>
+
+          <div class="info-panel">
+
+            <div class="info-placeholder" id="info-placeholder">
+              <p>Klik op een van de categorieën links om meer te weten te komen.
+                <i data-lucide="smile" style="display:inline-block;vertical-align:middle;color:#C4A57B;width:22px;height:22px;margin-left:4px;"></i>
+              </p>
+              <i data-lucide="arrow-left"></i>
             </div>
-        </div>
-    </section>
 
-    <section id="projects">
-        <div class="section-title">
-            <h2>Projecten</h2>
-        </div>
-
-        <div class="grid-3">
-            <article class="card project">
-                <div class="thumb"><img src="css/assets/portfolio-project-1.png"></div>
-                <h3>Virtuele kledingsapp - Perfect fit</h3>
-                <p>Een project waar ik aan heb gewerkt voor het vak van UI/UX Design.</p>
-                <div class="chips">
-                    <span class="chip">Branding</span>
-                    <span class="chip">Illustrator</span>
-                    <span class="chip">Typografie</span>
-                </div>
-            </article>
-
-            <article class="card project">
-                <div class="thumb"><img src="css/assets/portfolio-opdracht-project-2.png"></div>
-                <h3>Dashboard CV in Figma</h3>
-                <p>Project waar ik aan heb gewerkt in de lessen van werkplekleren.</p>
-                <div class="chips">
-                    <span class="chip">Figma</span>
-
-                </div>
-            </article>
-
-            <article class="card project">
-                <div class="thumb"><img src="css/assets/portfolio-project%20-3.png"></div>
-                <h3>Presentatie leerstoornissen</h3>
-                <p>Een project waar ik ooit aan heb gewerkt in de faculteit van psychologie.</p>
-                <div class="chips">
-                    <span class="chip">Powerpoint</span>
-
-                </div>
-            </article>
-        </div>
-
-    
-    </section>
-
-    <section id="skills">
-        <div class="section-title">
-            <h2>Skills</h2>
-        </div>
-        <div class="grid-3">
-            <div class="card skill">
-                <div class="row"><b>Figma (UI)</b><span class="muted">70%</span></div>
-                <div class="bar"><div style="width:70%"></div></div>
-            </div>
-            <div class="card skill">
-                <div class="row"><b>Branding</b><span class="muted">60%</span></div>
-                <div class="bar"><div style="width:60%"></div></div>
-            </div>
-            <div class="card skill">
-                <div class="row"><b>HTML/CSS</b><span class="muted">55%</span></div>
-                <div class="bar"><div style="width:55%"></div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="section-title">
-            <h2>Contact</h2>
-        </div>
-
-        <div class="grid-2">
-            <div class="card" style="padding:16px">
-                <b>Stuur me een bericht</b>
-                
-                
-                <div class="chips" style="margin-top:10px">
-                    
-                </div>
+            <div class="info-content" id="info-contact">
+              <h3><i data-lucide="mail"></i> Contactgegevens</h3>
+              <div class="contact-item">
+                <i data-lucide="mail"></i>
                 <div>
-                    <a class="chip" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-                    <a class="chip" href="https://www.behance.net" target="_blank" rel="noreferrer">Behance</a>
-                    <a class="chip" href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+                  <p class="label">Email</p>
+                  <p class="value">dilarabakayy2@gmail.com</p>
                 </div>
+              </div>
+              <div class="contact-item">
+                <i data-lucide="phone"></i>
+                <div>
+                  <p class="label">Telefoon</p>
+                  <p class="value">0487 01 04 17</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i data-lucide="map-pin"></i>
+                <div>
+                  <p class="label">Locatie</p>
+                  <p class="value">Maasmechelen, Limburg</p>
+                </div>
+              </div>
             </div>
 
-            <div class="card" style="padding:16px">
-                <form id="contactForm">
-                    <label>
-                        <span class="muted">Naam</span>
-                        <input name="name" placeholder="Jouw naam" required />
-                    </label>
-                    <label>
-                        <span class="muted">E-mail</span>
-                        <input name="email" type="email" placeholder="jij@example.com" required />
-                    </label>
-                    <label>
-                        <span class="muted">Bericht</span>
-                        <textarea name="message" placeholder="Hey! Ik zag je portfolio en..." required></textarea>
-                    </label>
-                    <button class="btn primary" type="submit">Verstuur</button>
-                    <div class="muted" style="font-size:12px">*Opent je standaard mail-app met ingevulde tekst.</div>
-                </form>
+            <div class="info-content" id="info-hobbies">
+              <h3>Hobbies &amp; Interesses</h3>
+              <div class="hobby-tags">
+                <div class="hobby-tag"><i data-lucide="sparkles"></i><span>Paardrijden</span></div>
+                <div class="hobby-tag"><i data-lucide="dumbbell"></i><span>Fitness</span></div>
+                <div class="hobby-tag"><i data-lucide="music"></i><span>Muziek</span></div>
+              </div>
+              <p style="color:var(--muted-fg);line-height:1.7;">
+                In mijn vrije tijd hou ik van actief bezig zijn. Paardrijden geeft me rust en verbinding met dieren.
+                Fitness helpt me energie te krijgen, en muziek is mijn manier om te ontspannen en te inspireren.
+              </p>
             </div>
+
+            <div class="info-content" id="info-about">
+              <h3>Over Mij</h3>
+              <p style="color:var(--muted-fg);line-height:1.7;margin-bottom:16px;">
+                Hallo! Ik ben Dilara Bakay, een eerstejaarsstudent digitale vormgeving aan PXL University.
+                Ik ben nieuwsgierig en werk graag creatief samen, maar kan ook zelfstandig werken op een oplossingsgerichte manier.
+              </p>
+              <p style="color:var(--muted-fg);line-height:1.7;margin-bottom:16px;">
+                Door mijn opleiding ontwikkel ik vaardigheden in UI design, scripting, en verschillende design tools.
+                Ik kijk uit naar nieuwe uitdagingen en leer graag bij.
+              </p>
+              <div class="about-box">
+                <p style="margin-bottom:12px;"><strong>Studie:</strong> Digital Design @ PXL University</p>
+                <p><strong>Focus:</strong> UI/UX, Branding &amp; Motion</p>
+              </div>
+            </div>
+
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <div class="footer-inner">
-            <span>© <span id="year"></span> Dilara Bakay — Digitale Vormgeving</span>
-            <a class="muted" href="#top">Terug naar boven ↑</a>
-            
+  <section id="projecten">
+    <div class="projecten-inner">
+      <div class="section-header">
+        <h2>Uitgelichte Projecten</h2>
+        <p>Een selectie van mijn recente werk in digital design, van UI/UX tot branding.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-thumb"><div class="project-thumb-overlay"></div></div>
+          <div class="project-body">
+            <span class="project-cat">UI/UX Design</span>
+            <h3 class="project-title">The Outfit Scan App</h3>
+            <p class="project-desc">Perfect Fit - Een mobiele applicatie voor outfit scanning</p>
+            <div class="project-link">Bekijk Project <i data-lucide="external-link"></i></div>
+          </div>
         </div>
-        <a href="./portfolio/reflectie.html">Reflectie werkplekleren 1</a>
-    </footer>
-</main>
 
-</body>
+        <div class="project-card">
+          <div class="project-thumb"><div class="project-thumb-overlay"></div></div>
+          <div class="project-body">
+            <span class="project-cat">Web Design</span>
+            <h3 class="project-title">Web Design</h3>
+            <p class="project-desc">Responsive website ontwerp voor een modern platform</p>
+            <div class="project-link">Bekijk Project <i data-lucide="external-link"></i></div>
+          </div>
+        </div>
 
+        <div class="project-card">
+          <div class="project-thumb"><div class="project-thumb-overlay"></div></div>
+          <div class="project-body">
+            <span class="project-cat">UI/UX</span>
+            <h3 class="project-title">UI/UX Design</h3>
+            <p class="project-desc">Gebruikersinterface voor een mobiele applicatie</p>
+            <div class="project-link">Bekijk Project <i data-lucide="external-link"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="skills-inner">
+      <h2 style="text-align:center;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:500;">Skills</h2>
+
+      <div class="skills-grid">
+        <div>
+          <h3 style="font-size:1.25rem;font-weight:500;margin-bottom:24px;">Software Skills</h3>
+          <div id="softwareSkills"></div>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.25rem;font-weight:500;margin-bottom:24px;">Taalvaardigheden</h3>
+          <div id="langSkills"></div>
+
+          <h3 style="font-size:1.25rem;font-weight:500;margin:32px 0 16px;">Opleiding</h3>
+          <div class="education-box">
+            <p class="edu-title">Digital Design</p>
+            <p class="edu-sub">PXL University</p>
+            <p class="edu-sub">2025 - 2028 (verwacht)</p>
+            <div class="edu-timeline">
+              <div class="edu-step"><div class="edu-dot on"></div><span>1DVO (2025-2026)</span></div>
+              <div class="edu-step"><div class="edu-dot off"></div><span>2DVO (2026-2027)</span></div>
+              <div class="edu-step"><div class="edu-dot off"></div><span>Afstuderen (2027-2028)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="contact-inner">
+      <h2>Contact</h2>
+      <p>Heb je een vraag of wil je samenwerken? Neem gerust contact met me op!</p>
+
+      <div class="social-links">
+        <a href="mailto:dilarabakayy2@gmail.com" class="social-link" aria-label="Email">
+          <i data-lucide="mail"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+      </div>
+
+      <div class="contact-form-card">
+        <h3>Stuur een bericht</h3>
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <input type="text" placeholder="Naam" />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email" />
+          </div>
+          <div class="form-group">
+            <textarea rows="5" placeholder="Bericht"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Verstuur</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Dilara Bakay</h3>
+          <p>Digital Design Student gepassioneerd over het creëren van mooie en functionele designs.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Snelle Links</h4>
+          <div class="footer-links">
+            <button onclick="goTo('home')">Home</button>
+            <button onclick="goTo('over-mij')">Over Mij</button>
+            <button onclick="goTo('projecten')">Projecten</button>
+            <button onclick="goTo('skills')">Skills</button>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-info">
+            <p>dilarabakayy2@gmail.com</p>
+            <p>0487 01 04 17</p>
+            <p>Maasmechelen, Limburg</p>
+          </div>
+          <div class="footer-socials">
+            <a href="mailto:dilarabakayy2@gmail.com" class="footer-social" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn">
+              <img src="./assets/linkedin.webp" alt="linkedin">
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub">
+              <img src="./assets/github.png" alt="github">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Dilara Bakay. Alle rechten voorbehouden.</p>
+        <br>
+        <p>Copyright (c) 2026 Lucide Icons and Contributors</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
