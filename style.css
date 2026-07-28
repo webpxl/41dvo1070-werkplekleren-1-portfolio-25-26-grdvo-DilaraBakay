@@ -741,7 +741,7 @@
 
     .social-link {
       width: 56px; height: 56px;
-      background: #1a1a1a;
+   background: rgb(201, 201, 201);
       color: #F5F0E8;
       border-radius: 50%;
       display: flex;
@@ -750,7 +750,7 @@
       transition: opacity 0.2s;
     }
 
-    .social-link:hover { opacity: 0.8; }
+    .social-link:hover { background: rgb(137, 137, 137);  }
     .social-link i { width: 24px; height: 24px; }
 
     .contact-form-card {
@@ -844,7 +844,7 @@
 
     .footer-social {
       width: 40px; height: 40px;
-      background: rgb(171, 171, 171);
+      background: rgb(201, 201, 201);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -852,7 +852,7 @@
       transition: background 0.2s;
     }
 
-    .footer-social:hover { background: rgb(137, 137, 137); }
+    .footer-social:hover {background: rgb(137, 137, 137);}
     .footer-social i { width: 18px; height: 18px; }
 
     .footer-bottom {
