@@ -1,6 +1,6 @@
 # Dilara Bakay – Portfolio
 
-Mijn persoonlijke portfoliowebsite, ontwikkeld als onderdeel van mijn opleiding **Digitale vormgeving** aan **PXL Digital** in Hasselt.
+Mijn persoonlijke portfoliowebsite, ontwikkeld als onderdeel van mijn opleiding **Digitale vormgeving** aan **Hogeschool PXL** in Hasselt.
 
 ## Over dit project
 
@@ -22,3 +22,6 @@ Mijn doel was om een portfolio te creëren dat professioneel oogt, maar tegelijk
 * CSS3
 * JavaScript
 * AI als ondersteunend hulpmiddel tijdens ontwerp- en ontwikkelproces
+
+Dilara Bakay · Dilara.Bakay@STUDENT.PXL.BE
+ · Maasmechelen, Limburg
