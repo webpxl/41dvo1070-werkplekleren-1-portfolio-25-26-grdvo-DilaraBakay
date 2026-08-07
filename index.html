@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +13,7 @@
   <script src="./script.js" defer></script>
 
 </head>
+
 <body>
   <nav>
     <div class="nav-inner">
@@ -20,11 +22,11 @@
       </div>
 
       <div class="nav-links" id="navLinks">
-        <button onclick="goTo('home')"      data-nav="home"      class="active">Home</button>
-        <button onclick="goTo('over-mij')"  data-nav="over-mij">Over Mij</button>
+        <button onclick="goTo('home')" data-nav="home" class="active">Home</button>
+        <button onclick="goTo('over-mij')" data-nav="over-mij">Over Mij</button>
         <button onclick="goTo('projecten')" data-nav="projecten">Projecten</button>
-        <button onclick="goTo('skills')"    data-nav="skills">Skills</button>
-        <button onclick="goTo('contact')"   data-nav="contact">Contact</button>
+        <button onclick="goTo('skills')" data-nav="skills">Skills</button>
+        <button onclick="goTo('contact')" data-nav="contact">Contact</button>
       </div>
 
       <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -33,11 +35,11 @@
     </div>
 
     <div class="nav-mobile" id="mobileMenu">
-      <button onclick="goTo('home')"      data-nav-m="home">Home</button>
-      <button onclick="goTo('over-mij')"  data-nav-m="over-mij">Over Mij</button>
+      <button onclick="goTo('home')" data-nav-m="home">Home</button>
+      <button onclick="goTo('over-mij')" data-nav-m="over-mij">Over Mij</button>
       <button onclick="goTo('projecten')" data-nav-m="projecten">Projecten</button>
-      <button onclick="goTo('skills')"    data-nav-m="skills">Skills</button>
-      <button onclick="goTo('contact')"   data-nav-m="contact">Contact</button>
+      <button onclick="goTo('skills')" data-nav-m="skills">Skills</button>
+      <button onclick="goTo('contact')" data-nav-m="contact">Contact</button>
     </div>
   </nav>
   <section id="home">
@@ -59,7 +61,8 @@
           UI/UX-student met een passie voor gebruiksvriendelijke interfaces, branding en digitale vormgeving.
         </p>
         <p class="hero-desc-sm">
-          Ik focus op UI/UX, branding en motion basics. Hier vind je een selectie van mijn schoolprojecten en experimenten.
+          Ik focus op UI/UX, branding en motion basics. Hier vind je een selectie van mijn schoolprojecten en
+          experimenten.
         </p>
         <p class="hero-desc-sm">
           Bekijk mijn recente schoolprojecten en ontdek hoe ik designproblemen aanpak.
@@ -82,23 +85,21 @@
         </div>
 
         <div class="hero-buttons">
-          <button class="btn-primary"    onclick="goTo('projecten')">Bekijk Projecten</button>
-          <button class="btn-secondary"  onclick="goTo('contact')">Contact</button>
+          <button class="btn-primary" onclick="goTo('projecten')">Bekijk Projecten</button>
+          <button class="btn-secondary" onclick="goTo('contact')">Contact</button>
         </div>
       </div>
 
       <div class="hero-photo-col" id="heroPhoto">
         <div class="hero-photo-wrap">
           <div class="hero-glow-bg"></div>
+          
 
           <div class="marquee-top">
             <div class="marquee-track go-left">
               <span class="marquee-item">Figma</span><span class="marquee-dot">•</span>
               <span class="marquee-item">Photoshop</span><span class="marquee-dot">•</span>
               <span class="marquee-item">Illustrator</span><span class="marquee-dot">•</span>
-              <span class="marquee-item">After Effects</span><span class="marquee-dot">•</span>
-              <span class="marquee-item">InDesign</span><span class="marquee-dot">•</span>
-              <span class="marquee-item">Premiere Pro</span><span class="marquee-dot">•</span>
               <span class="marquee-item">Figma</span><span class="marquee-dot">•</span>
               <span class="marquee-item">Photoshop</span><span class="marquee-dot">•</span>
               <span class="marquee-item">Illustrator</span><span class="marquee-dot">•</span>
@@ -109,7 +110,7 @@
           </div>
 
           <div class="hero-photo-frame">
-            <img src="DIDI.PNG" alt="Dilara Bakay" />
+            <img src="./assets/profielfoto.jpeg" alt="Dilara Bakay" />
             <div class="hero-photo-overlay"></div>
           </div>
 
@@ -149,15 +150,13 @@
           <div class="avatar-col">
             <div class="avatar-wrap">
               <div class="avatar-circle">
-                <img src="optie1-1.PNG" alt="Dilara Bakay" />
+                <img src="./assets/optie1.1.PNG" alt="Dilara Bakay" />
               </div>
-              <div class="speech-bubble">
-                <p>Wat wil je weten? →</p>
-              </div>
+
             </div>
 
             <div class="category-buttons">
-              <button class="cat-btn" onclick="showInfo('contact')" id="btn-contact">
+              <button class="cat-btn active" onclick="showInfo('contact')" id="btn-contact">
                 <i data-lucide="mail"></i>
                 <span>Contactgegevens</span>
               </button>
@@ -174,14 +173,7 @@
 
           <div class="info-panel">
 
-            <div class="info-placeholder" id="info-placeholder">
-              <p>Klik op een van de categorieën links om meer te weten te komen.
-                <i data-lucide="smile" style="display:inline-block;vertical-align:middle;color:#C4A57B;width:22px;height:22px;margin-left:4px;"></i>
-              </p>
-              <i data-lucide="arrow-left"></i>
-            </div>
-
-            <div class="info-content" id="info-contact">
+            <div class="info-content visible" id="info-contact">
               <h3><i data-lucide="mail"></i> Contactgegevens</h3>
               <div class="contact-item">
                 <i data-lucide="mail"></i>
@@ -223,7 +215,8 @@
               <h3>Over Mij</h3>
               <p style="color:var(--muted-fg);line-height:1.7;margin-bottom:16px;">
                 Hallo! Ik ben Dilara Bakay, een eerstejaarsstudent digitale vormgeving aan PXL University.
-                Ik ben nieuwsgierig en werk graag creatief samen, maar kan ook zelfstandig werken op een oplossingsgerichte manier.
+                Ik ben nieuwsgierig en werk graag creatief samen, maar kan ook zelfstandig werken op een
+                oplossingsgerichte manier.
               </p>
               <p style="color:var(--muted-fg);line-height:1.7;margin-bottom:16px;">
                 Door mijn opleiding ontwikkel ik vaardigheden in UI design, scripting, en verschillende design tools.
@@ -250,32 +243,38 @@
 
       <div class="projects-grid">
         <div class="project-card">
-          <div class="project-thumb"><div class="project-thumb-overlay"></div></div>
+          <div class="project-thumb">
+            <img src="./assets/perfecttFit.png" alt="foto van app">
+          </div>
           <div class="project-body">
             <span class="project-cat">UI/UX Design</span>
             <h3 class="project-title">The Outfit Scan App</h3>
             <p class="project-desc">Perfect Fit - Een mobiele applicatie voor outfit scanning</p>
-            <div class="project-link">Bekijk Project <i data-lucide="external-link"></i></div>
+            <a class="project-link" href="./project1.html">Bekijk Project <i data-lucide="external-link"></i></a>
           </div>
         </div>
 
         <div class="project-card">
-          <div class="project-thumb"><div class="project-thumb-overlay"></div></div>
+          <div class="project-thumb">
+            <img src="./assets/design.png" alt="foto van design">
+          </div>
           <div class="project-body">
             <span class="project-cat">Web Design</span>
             <h3 class="project-title">Web Design</h3>
             <p class="project-desc">Responsive website ontwerp voor een modern platform</p>
-            <div class="project-link">Bekijk Project <i data-lucide="external-link"></i></div>
+            <a class="project-link" href="./project2.html">Bekijk Project <i data-lucide="external-link"></i></a>
           </div>
         </div>
 
         <div class="project-card">
-          <div class="project-thumb"><div class="project-thumb-overlay"></div></div>
+          <div class="project-thumb">
+            <img src="./assets/ui.png" alt="">
+          </div>
           <div class="project-body">
             <span class="project-cat">UI/UX</span>
             <h3 class="project-title">UI/UX Design</h3>
             <p class="project-desc">Gebruikersinterface voor een mobiele applicatie</p>
-            <div class="project-link">Bekijk Project <i data-lucide="external-link"></i></div>
+            <a class="project-link" href="./project3.html">Bekijk Project <i data-lucide="external-link"></i></a>
           </div>
         </div>
       </div>
@@ -302,9 +301,15 @@
             <p class="edu-sub">PXL University</p>
             <p class="edu-sub">2025 - 2028 (verwacht)</p>
             <div class="edu-timeline">
-              <div class="edu-step"><div class="edu-dot on"></div><span>1DVO (2025-2026)</span></div>
-              <div class="edu-step"><div class="edu-dot off"></div><span>2DVO (2026-2027)</span></div>
-              <div class="edu-step"><div class="edu-dot off"></div><span>Afstuderen (2027-2028)</span></div>
+              <div class="edu-step">
+                <div class="edu-dot on"></div><span>1DVO (2025-2026)</span>
+              </div>
+              <div class="edu-step">
+                <div class="edu-dot off"></div><span>2DVO (2026-2027)</span>
+              </div>
+              <div class="edu-step">
+                <div class="edu-dot off"></div><span>Afstuderen (2027-2028)</span>
+              </div>
             </div>
           </div>
         </div>
@@ -322,7 +327,8 @@
         <a href="mailto:dilarabakayy2@gmail.com" class="social-link" aria-label="Email">
           <img src="./assets/email.png" alt="mail">
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link"
+          aria-label="LinkedIn">
           <img src="./assets/linkedin.webp" alt="linkedin">
         </a>
         <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
@@ -375,10 +381,12 @@
             <a href="mailto:dilarabakayy2@gmail.com" class="footer-social" aria-label="Email">
               <img src="./assets/email.png" alt="email">
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social"
+              aria-label="LinkedIn">
               <img src="./assets/linkedin.webp" alt="linkedin">
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-social"
+              aria-label="GitHub">
               <img src="./assets/github.png" alt="github">
             </a>
           </div>
@@ -392,4 +400,5 @@
     </div>
   </footer>
 </body>
+
 </html>

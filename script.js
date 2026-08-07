@@ -52,15 +52,16 @@
     window.addEventListener('scroll', heroParallax, { passive: true });
 
     // ── Over Mij buttons ─────────────────────────────────────────
-    function showInfo(type) {
-      document.getElementById('info-placeholder').style.display = 'none';
+function showInfo(type) {
       document.querySelectorAll('.info-content').forEach(el => el.classList.remove('visible'));
+      document.querySelector('#info-contact').classList.add('active')
       document.getElementById('info-' + type).classList.add('visible');
       ['contact', 'hobbies', 'about'].forEach(t => {
+        document.querySelectorAll('.eerste').classList.add('visible')
         document.getElementById('btn-' + t).classList.toggle('active', t === type);
       });
       lucide.createIcons(); // refresh icons inside newly visible content
-    }
+}
 
     // ── Skills bars ──────────────────────────────────────────────
     const softwareSkills = [

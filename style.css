@@ -353,9 +353,6 @@
 
     .marquee-dot { color: rgba(196,165,123,0.4); flex-shrink: 0; }
 
-    /* ============================================================
-       OVER MIJ SECTION
-    ============================================================ */
     #over-mij {
       min-height: 100vh;
       display: flex;
@@ -436,7 +433,6 @@
       50%       { transform: scale(1.08); }
     }
 
-    /* Category buttons */
     .category-buttons { display: flex; flex-direction: column; gap: 16px; width: 100%; }
 
     .cat-btn {
@@ -478,7 +474,7 @@
       50%       { box-shadow: 0 0 18px rgba(196,165,123,0.6); }
     }
 
-    /* Info panel */
+
     .info-panel {
       background: var(--bg);
       border: 2px solid rgba(196,165,123,0.2);
@@ -554,9 +550,6 @@
       margin-top: 20px;
     }
 
-    /* ============================================================
-       PROJECTEN SECTION
-    ============================================================ */
     #projecten {
       min-height: 100vh;
       padding: 80px 24px;
@@ -644,9 +637,6 @@
     .project-link i { width: 14px; height: 14px; transition: transform 0.2s; }
     .project-card:hover .project-link i { transform: translateX(4px); }
 
-    /* ============================================================
-       SKILLS SECTION
-    ============================================================ */
     #skills {
       min-height: 100vh;
       display: flex;
@@ -716,9 +706,6 @@
     .edu-dot.on  { background: #1a1a1a; }
     .edu-dot.off { background: var(--muted-fg); }
 
-    /* ============================================================
-       CONTACT SECTION
-    ============================================================ */
     #contact {
       min-height: 100vh;
       display: flex;
@@ -741,7 +728,6 @@
 
     .social-link {
       width: 56px; height: 56px;
-   background: rgb(201, 201, 201);
       color: #F5F0E8;
       border-radius: 50%;
       display: flex;
@@ -750,7 +736,6 @@
       transition: opacity 0.2s;
     }
 
-    .social-link:hover { background: rgb(137, 137, 137);  }
     .social-link i { width: 24px; height: 24px; }
 
     .contact-form-card {
@@ -802,9 +787,6 @@
 
     .btn-submit:hover { opacity: 0.85; }
 
-    /* ============================================================
-       FOOTER
-    ============================================================ */
     footer {
       border-top: 1px solid var(--border);
       background: rgba(229,220,200,0.3);
@@ -844,15 +826,12 @@
 
     .footer-social {
       width: 40px; height: 40px;
-      background: rgb(201, 201, 201);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: background 0.2s;
     }
-
-    .footer-social:hover {background: rgb(137, 137, 137);}
     .footer-social i { width: 18px; height: 18px; }
 
     .footer-bottom {
@@ -863,9 +842,6 @@
       color: var(--muted-fg);
     }
 
-    /* ============================================================
-       RESPONSIVE
-    ============================================================ */
     @media (max-width: 768px) {
       .nav-links  { display: none; }
       .nav-hamburger { display: flex; }
@@ -891,4 +867,9 @@
 
     @media (min-width: 769px) and (max-width: 1024px) {
       .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .grid-toegevoegd {
+      display:grid; 
+      grid-template-columns: 1fr; 
     }
