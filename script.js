@@ -78,7 +78,6 @@ function showInfo(type) {
 
     const langSkills = [
       { name: 'Nederlands', level: 100, label: 'Moedertaal'   },
-      { name: 'Turks',      level: 100, label: 'Moedertaal'   },
       { name: 'Engels',     level: 85,  label: 'Professioneel' },
       { name: 'Frans',      level: 40,  label: 'Basis'         }
     ];

@@ -103,7 +103,63 @@
       position: relative;
       overflow: hidden;
     }
+/* ========================================
+   TOPOGRAFISCHE ACHTERGROND HERO
+======================================== */
 
+.topographic-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  /* Achter tekst en foto */
+  z-index: 0;
+
+  /* Zorgt dat de achtergrond nooit klikbaar is */
+  pointer-events: none;
+}
+
+.topographic-background svg {
+  position: absolute;
+
+  /* Iets groter dan de hero zodat de animatie
+     nooit lege randen laat zien */
+  width: 110%;
+  height: 110%;
+  left: -5%;
+  top: -5%;
+}
+
+.topographic-lines {
+  fill: none;
+
+  /* Jouw goud/beige */
+  stroke: #C4A57B;
+
+  /* Zichtbaar, maar nog steeds achtergrond */
+  stroke-opacity: 0.13;
+
+  stroke-width: 1.2;
+  vector-effect: non-scaling-stroke;
+
+  animation: topoMove 10s ease-in-out infinite alternate;
+}
+
+@keyframes topoMove {
+  0% {
+    transform: translate(-10px, -5px) scale(1);
+  }
+
+  50% {
+    transform: translate(15px, 8px) scale(1.015);
+  }
+
+  100% {
+    transform: translate(-5px, 15px) scale(1.01);
+  }
+}
     .hero-blob {
       position: absolute;
       border-radius: 50%;
@@ -171,8 +227,8 @@
 
     .hero-desc-lg {
       font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      line-height: 1.6;
-      max-width: 560px;
+      line-height: 1.75;
+      max-width: 480px;
       margin-bottom: 12px;
       animation: fadeInUp 0.8s 0.5s ease both;
     }
@@ -180,8 +236,8 @@
     .hero-desc-sm {
       font-size: 1rem;
       color: var(--muted-fg);
-      line-height: 1.7;
-      max-width: 480px;
+      line-height: 1.8;
+      max-width: 430px;
       margin-bottom: 8px;
       animation: fadeInUp 0.8s 0.6s ease both;
     }
@@ -338,15 +394,15 @@
       width: max-content;
     }
 
-    .marquee-track.go-left  { animation: mLeft  20s linear infinite; }
-    .marquee-track.go-right { animation: mRight 20s linear infinite; }
+    .marquee-track.go-left  { animation: mLeft  38s linear infinite; }
+    .marquee-track.go-right { animation: mRight 32s linear infinite; }
 
     @keyframes mLeft  { from { transform: translateX(0);    } to { transform: translateX(-50%); } }
     @keyframes mRight { from { transform: translateX(-50%); } to { transform: translateX(0);    } }
 
     .marquee-item {
-      font-size: 1.25rem;
-      color: var(--muted-fg);
+      font-size: 1.1rem;
+      color: var(rgba(90, 90, 90, 0.75));
       font-weight: 300;
       flex-shrink: 0;
     }
@@ -461,13 +517,7 @@
       transform: scale(1.05);
     }
 
-    .cat-btn.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      transform: scale(1.05);
-      box-shadow: 0 4px 20px rgba(196,165,123,0.3);
-      animation: none;
-    }
+   
 
     @keyframes glowPulse {
       0%, 100% { box-shadow: 0 0 0px rgba(196,165,123,0.1); }
@@ -873,3 +923,92 @@
       display:grid; 
       grid-template-columns: 1fr; 
     }
+
+    .midden {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    input[type="radio"] {
+  display: none;
+}
+
+input[name="about-tabs"] {
+  display: none;
+}
+
+/* radio buttons zelf verbergen */
+input[name="about-tabs"] {
+  display: none;
+}
+
+
+/* standaard alle info verbergen */
+.info-content {
+  display: none;
+  animation: fadeInUp 0.4s ease both;
+}
+
+
+/* juiste info tonen */
+#tab-contact:checked ~ .over-mij-grid #info-contact {
+  display: block;
+}
+
+#tab-hobbies:checked ~ .over-mij-grid #info-hobbies {
+  display: block;
+}
+
+#tab-about:checked ~ .over-mij-grid #info-about {
+  display: block;
+}
+
+
+/* actieve knop bruin maken */
+#tab-contact:checked ~ .over-mij-grid label[for="tab-contact"],
+#tab-hobbies:checked ~ .over-mij-grid label[for="tab-hobbies"],
+#tab-about:checked ~ .over-mij-grid label[for="tab-about"] {
+  background-color: #c7a879;
+  border-color: #c7a879;
+  color: #1a1a1a;
+}
+
+
+/* cursor zodat labels als buttons voelen */
+.cat-btn {
+  cursor: pointer;
+}
+
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-card:visited {
+  color: inherit;
+}
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+}
+
+.footer-bottom a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-separator {
+    margin: 0 8px;
+}
+.lucide-copyright {
+    font-size: 14px;
+    color: #777;
+}
