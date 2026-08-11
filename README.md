@@ -18,7 +18,7 @@ Mijn doel was om een portfolio te creëren dat professioneel oogt, maar tegelijk
 
 ## Gebouwd met
 
-- HTML5
+- HTML
 - CSS
 - JavaScript
 
