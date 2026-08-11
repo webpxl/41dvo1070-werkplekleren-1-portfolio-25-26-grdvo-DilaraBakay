@@ -109,3 +109,18 @@ function showInfo(type) {
         });
       }
     }, { threshold: 0.2 }).observe(document.getElementById('skills'));
+
+    function showInfo(type) {
+
+  document.querySelectorAll('.cat-btn').forEach(button => {
+    button.classList.remove('active');
+  });
+
+  document.querySelectorAll('.info-content').forEach(content => {
+    content.classList.remove('visible');
+  });
+
+  document.getElementById(`btn-${type}`).classList.add('active');
+
+  document.getElementById(`info-${type}`).classList.add('visible');
+}
