@@ -264,4 +264,14 @@ footer p { font-size: 0.875rem; color: var(--muted-fg); }
   .page-hero-meta { gap: 20px; }
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
