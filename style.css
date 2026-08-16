@@ -103,9 +103,6 @@
       position: relative;
       overflow: hidden;
     }
-/* ========================================
-   TOPOGRAFISCHE ACHTERGROND HERO
-======================================== */
 
 .topographic-background {
   position: absolute;
@@ -113,19 +110,13 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-
-  /* Achter tekst en foto */
   z-index: 0;
 
-  /* Zorgt dat de achtergrond nooit klikbaar is */
   pointer-events: none;
 }
 
 .topographic-background svg {
   position: absolute;
-
-  /* Iets groter dan de hero zodat de animatie
-     nooit lege randen laat zien */
   width: 110%;
   height: 110%;
   left: -5%;
@@ -134,17 +125,13 @@
 
 .topographic-lines {
   fill: none;
-
-  /* Jouw goud/beige */
   stroke: #C4A57B;
-
-  /* Zichtbaar, maar nog steeds achtergrond */
   stroke-opacity: 0.13;
 
   stroke-width: 1.2;
   vector-effect: non-scaling-stroke;
 
-  animation: topoMove 10s ease-in-out infinite alternate;
+  animation: topoMove 4s ease-in-out infinite alternate;
 }
 
 @keyframes topoMove {
@@ -370,8 +357,6 @@
       0%, 100% { transform: translateY(0) rotate(0deg); }
       50%       { transform: translateY(-10px) rotate(5deg); }
     }
-
-    /* Marquee */
     .marquee-top {
       position: absolute;
       top: -48px; left: 0; right: 0;
@@ -448,8 +433,7 @@
       gap: 48px;
       align-items: start;
     }
-
-    /* Avatar */
+    
     .avatar-col { display: flex; flex-direction: column; align-items: center; }
 
     .avatar-wrap { position: relative; margin-bottom: 32px; }
@@ -936,4 +920,58 @@
 .lucide-copyright {
     font-size: 14px;
     color: #777;
+}
+
+/* Uitleg percentages bij Skills */
+.skills-explanation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+    margin: 30px 0;
+    padding: 22px 24px;
+
+    background: rgba(253, 251, 247, 0.7);
+    border: 1px solid rgba(196, 165, 123, 0.25);
+    border-radius: 14px;
+}
+
+.skills-explanation-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #C4A57B;
+    color: white;
+    border-radius: 50%;
+}
+
+.skills-explanation-icon i {
+    width: 22px;
+    height: 22px;
+}
+
+.skills-explanation-text h3 {
+    margin: 0 0 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.skills-explanation-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+}
+.skills-intro {
+    text-align: center;
+    color: #666;
+    margin: 10px 0 28px;
+    font-size: 1rem;
 }
