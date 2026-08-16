@@ -1,6 +1,6 @@
  lucide.createIcons();
 
-    // ── Smooth scroll ────────────────────────────────────────────
+   
     function goTo(id) {
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -10,7 +10,7 @@
       lucide.createIcons();
     }
 
-    // ── Mobile menu ──────────────────────────────────────────────
+    
     let menuOpen = false;
     function toggleMenu() {
       menuOpen = !menuOpen;
@@ -19,7 +19,7 @@
       lucide.createIcons();
     }
 
-    // ── Active nav on scroll ─────────────────────────────────────
+
     const navSections = ['home', 'over-mij', 'projecten', 'skills', 'contact'];
 
     function updateNav() {
@@ -39,7 +39,7 @@
 
     window.addEventListener('scroll', updateNav, { passive: true });
 
-    // ── Hero parallax on scroll ──────────────────────────────────
+    
     function heroParallax() {
       const heroH = document.getElementById('home').offsetHeight;
       const p = Math.min(window.scrollY / heroH, 1);
@@ -52,7 +52,6 @@
     window.addEventListener('scroll', heroParallax, { passive: true });
 
 
-    // ── Skills bars ──────────────────────────────────────────────
     const softwareSkills = [
       { name: 'HTML',               level: 70 },
       { name: 'CSS',                level: 75 },
